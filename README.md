@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,7 @@
         }
 
         body {
-            background-color: #000000; /* Hitam pekat sepenuhnya dari Skrin 1 */
+            background-color: #000000; /* Hitam pekat kosong sepenuhnya */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,17 +51,17 @@
             width: 100%;
         }
 
-        /* KOTAK HATI BESAR NAMA DAYAH */
+        /* HATI SAIZ SEDERHANA (NGAM UNTUK PFP) */
         .heart-text-container {
             font-family: 'Times New Roman', Times, serif; 
-            color: #ff0000; /* Warna merah terang menyala asli */
-            font-size: 18px; /* Ditambah saiz font huruf untuk besarkan saiz hati Keseluruhan */
+            color: #ff0000; /* Merah terang menyala asli */
+            font-size: 14px; /* Ditukar ke 14px untuk saiz sederhana ideal */
             font-weight: bold;
-            line-height: 1.2;
+            line-height: 1.3; /* Jarak baris yang mampat dan kemas */
             letter-spacing: 2px;
             display: inline-block;
             animation: heartbeat 1.2s infinite ease-in-out;
-            filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.9)); /* Efek glow merah lebih tebal */
+            filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.85)); /* Glow merah ngam-ngam */
         }
 
         .line {
@@ -69,10 +70,9 @@
             white-space: pre;
         }
 
-        /* Animasi degupan hati yang lebih hidup */
         @keyframes heartbeat {
             0% { transform: scale(1); }
-            50% { transform: scale(1.06); }
+            50% { transform: scale(1.04); }
             100% { transform: scale(1); }
         }
     </style>
@@ -86,11 +86,9 @@
 
     <div id="main-screen">
         <div class="heart-text-container">
-            <span class="line">dayahdayahdayah             dayahdayahdayah</span>
-            <span class="line">dayahdayahdayahdayah     dayahdayahdayahdayah</span>
-            <span class="line">dayahdayahdayahdayahdayahdayahdayahdayahdayahdayah</span>
-            <span class="line">dayahdayahdayahdayahdayahdayahdayahdayahdayahdayah</span>
-            <span class="line">dayahdayahdayahdayahdayahdayahdayahdayahdayah</span>
+            <span class="line">dayahdayah         dayahdayah</span>
+            <span class="line">dayahdayahdayah     dayahdayahdayah</span>
+            <span class="line">dayahdayahdayahdayahdayahdayahdayahdayah</span>
             <span class="line">dayahdayahdayahdayahdayahdayahdayahdayah</span>
             <span class="line">dayahdayahdayahdayahdayahdayahdayah</span>
             <span class="line">dayahdayahdayahdayahdayahdayah</span>
@@ -104,10 +102,7 @@
 
     <script>
         function bukaKejutan() {
-            // Sembunyikan skrin intro
             document.getElementById('intro-screen').style.display = 'none';
-            
-            // Paparkan skrin utama (Hati Besar)
             document.getElementById('main-screen').style.display = 'block';
         }
     </script>
